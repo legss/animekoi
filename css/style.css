@@ -1,29 +1,3 @@
-@media screen and (max-width: 700px) {
-  header .conteiner {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-            flex-direction: column;
-  }
-  .botao {
-    margin-top: 5px;
-    width: 190px;
-    height: 60px;
-  }
-  .trailer iframe {
-    max-width: 80%;
-  }
-}
-
-@media screen and (min-width: 1000px) {
-  .description {
-    width: 50%;
-  }
-}
-
 * {
   margin: 0;
   padding: 0;
@@ -186,7 +160,7 @@ header nav a:hover {
 
 .owl-carousel .owl-item img:hover {
   display: block;
-  width: 70%;
+  width: 80%;
 }
 
 footer {
@@ -228,5 +202,42 @@ footer .referencia {
 footer .referencia a {
   margin-right: 20px;
   color: #aaa;
+}
+
+@media screen and (max-width: 700px) {
+  header .conteiner {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  .botao {
+    margin-top: 5px;
+    width: 190px;
+    height: 60px;
+    margin-left: 60px;
+  }
+  .trailer iframe {
+    max-width: 80%;
+  }
+  .owl-carousel .owl-item img {
+    display: block;
+    width: 90%;
+    -webkit-transition: 0.8s;
+    transition: 0.8s;
+  }
+  .owl-carousel .owl-item img:hover {
+    display: block;
+    width: 100%;
+  }
+}
+
+@media screen and (min-width: 1000px) {
+  .description {
+    width: 50%;
+  }
 }
 /*# sourceMappingURL=style.css.map */
