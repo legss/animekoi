@@ -1,0 +1,154 @@
+@import './variables';
+@import './functions';
+@import './queries';
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+// elementos base
+body {
+  background-color: $black;
+  font-family: $font-page;
+  color: $color-font-page;
+}
+// header
+header {
+  .conteiner {
+    @include flexFunction(row, space-between, center);
+  }
+  .logo {
+    text-transform: uppercase;
+    color: $red;
+    font-family: $font-logo;
+    font-size: 40px;
+  }
+
+  nav {
+    margin-right: 15px;
+  }
+  nav a {
+    text-decoration: none;
+    color: $color-a-nav;
+    margin-right: 10px;
+  }
+  nav a:hover {
+    color: #fff;
+  }
+}
+// anime principal
+
+.anime-principal {
+  background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5) 100%),
+    url('../img/Tengen_Birthday_Banner.png');
+
+  font-size: 16px;
+  height: 600px;
+  background-size: cover;
+
+  @include flexFunction(column, center, flex-start);
+
+  .description {
+    margin-bottom: 40px;
+  }
+
+  .conteiner .title {
+    margin-top: 15%;
+    font-size: 40px;
+    font-family: 'Trebuchet MS', Arial, sans-serif;
+  }
+}
+
+.botao {
+  background-color: rgba(0, 0, 0, 0.5);
+  border: none;
+  color: white;
+  text-transform: uppercase;
+
+  padding: 15px 30px;
+  margin-right: 12px;
+
+  cursor: pointer;
+  transition: 0.3s ease all;
+
+  &:hover {
+    background-color: white;
+    color: $black;
+  }
+  i {
+    margin-right: 8px;
+  }
+}
+
+.conteiner {
+  margin-left: 20px;
+}
+
+// filme
+
+.trailer {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+
+  background: rgba(0, 0, 0, 0.95);
+  transform: translate(-50%, -50%);
+  z-index: 10000;
+
+  width: 100%;
+  height: 100%;
+
+  @include flexFunction(column, center, center);
+
+  visibility: hidden;
+  opacity: 0;
+}
+
+.active {
+  visibility: visible;
+  opacity: 1;
+}
+
+.trailer {
+  h2 {
+    color: white;
+  }
+  iframe {
+    position: relative;
+    max-width: 900px;
+    outline: none;
+  }
+}
+
+// carrosel
+.conteiner .title {
+  margin-top: 40px;
+  text-transform: uppercase;
+}
+.box-film {
+  margin-top: 10px;
+  background-size: cover;
+  display: block;
+  cursor: pointer;
+}
+.owl-carousel .owl-item img:hover {
+  display: block;
+  width: 70%;
+}
+
+// footter
+
+footer {
+  @include flexFunction(row, center, center);
+  background-color: red;
+  margin-top: 60px;
+  .referencia {
+    @include flexFunction(row, center, center);
+    width: 100%;
+    height: 30px;
+  }
+  .referencia a {
+    margin-right: 20px;
+    color: $color-a-nav;
+  }
+}
